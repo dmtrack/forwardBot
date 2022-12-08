@@ -1,4 +1,4 @@
-const textParser = function (text) {
+export const textParser = function (text: string) {
   const array = text.split("");
   const index = array.findIndex((el) => {
     return el === "/";
@@ -8,5 +8,3 @@ const textParser = function (text) {
     message: text.slice(index + 1, text.length),
   };
 };
-
-module.exports = textParser;
